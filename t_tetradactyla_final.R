@@ -8184,7 +8184,7 @@ den_rod_1000m <- buffer_1000m |>
               mutate(comprimento_rod_1000m = as.numeric(comp_rod_1000m)),
             by = "id_unico")|>
   mutate(comprimento_rod_1000m = ifelse(is.na(comprimento_rod_1000m), 0, comprimento_rod_1000m),
-         den_rod_1000m = (comprimento_rod_1000m/1000) / ((3.14*500^2)/1e6))
+         den_rod_1000m = (comprimento_rod_1000m/1000) / ((3.14*1000^2)/1e6))
 
 
 den_1000m <- data.frame(id_unico = lsm_tt_ma_1000m$id_unico_1000m) |>
@@ -8217,7 +8217,7 @@ den_rod_2000m <- buffer_2000m |>
               mutate(comprimento_rod_2000m = as.numeric(comp_rod_2000m)),
             by = "id_unico")|>
   mutate(comprimento_rod_2000m = ifelse(is.na(comprimento_rod_2000m), 0, comprimento_rod_2000m),
-         den_rod_2000m = (comprimento_rod_2000m/1000) / ((3.14*500^2)/1e6))
+         den_rod_2000m = (comprimento_rod_2000m/1000) / ((3.14*2000^2)/1e6))
 
 
 den_2000m <- data.frame(id_unico = lsm_tt_ma_2000m$id_unico_2000m) |>
